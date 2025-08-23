@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import retrofit2.Call
+import android.widget.TextView
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+        val textView = findViewById<TextView>(R.id.textView)
 
 
         val retrofitBuilder = Retrofit.Builder()
@@ -36,7 +38,10 @@ class MainActivity : AppCompatActivity() {
                 for(MyData in productList){
                     collectDataInSB.append(MyData.title + "")
                 }
+                val tv = findViewById<TextView>(R.id.textView)
+                tv.text = collectDataInSB
             }
+
 
             override fun onFailure(call: Call<MyData?>, t: Throwable) {
         // if API call fails
