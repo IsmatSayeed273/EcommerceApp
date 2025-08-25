@@ -1,5 +1,4 @@
 package com.example.apis
-
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
