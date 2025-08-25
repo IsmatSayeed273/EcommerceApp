@@ -48,7 +48,7 @@ dependencies {
     //adding retrofit dependency and gson
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
-
-
+     // picasso for loading image from url
+    implementation("com.squareup.picasso:picasso:2.8")
 
 }
